@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\wjx95\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\wjx95\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_FileRename.-789546502.00" t="ExcludeRecursive" />
+    <e p="D:\Source1\Workspaces\工作区\Lsjj_wpf\FileRename" t="IncludeFlat">
+      <e p="FileRename" t="IncludeRecursive">
+        <e p="AboutBox1.cs" t="Include" />
+        <e p="AboutBox1.Designer.cs" t="Include" />
+        <e p="AboutBox1.resx" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FileRename.csproj" t="IncludeRecursive" />
+        <e p="FileRename_TemporaryKey.pfx" t="Include" />
+        <e p="Icon.ico" t="Include" />
+        <e p="icons8_edit_property.ico" t="Include" />
+        <e p="LoadingWait.xaml" t="Include" />
+        <e p="LoadingWait.xaml.cs" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="App.g.cs" t="Include" />
+            <e p="GeneratedInternalTypeHelper.g.cs" t="Include" />
+            <e p="LoadingWait.g.cs" t="Include" />
+            <e p="MainWindow.g.cs" t="Include" />
+          </e>
+        </e>
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="app.manifest" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="wei.pfx" t="Include" />
+      </e>
+      <e p="FileRename.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
