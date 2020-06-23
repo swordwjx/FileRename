@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<UsingTask TaskName="SmartAssembly.MSBuild.Tasks.Build" AssemblyName="SmartAssembly.MSBuild.Tasks, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7f465a1c156d4d57" />
+<Target Name="BeforeBuild" Condition=" '$(Configuration)' == 'Release' ">
+<CreateProperty Value="true">
+<Output TaskParameter="Value" PropertyName="RunSmartAssembly" />
+</CreateProperty>
+</Target>
+<Target Name="AfterCompile" Condition=" '$(RunSmartAssembly)' != '' ">
+<Copy SourceFiles=".\obj\Release\$(TargetFileName)" DestinationFiles=".\obj\Release\$(TargetName).temp$(TargetExt)" />
+<SmartAssembly.MSBuild.Tasks.Build ProjectFile="$(SolutionDir)\Build\$(TargetName).saproj" OverwriteAssembly="True" />
+</Target>
+</Project>

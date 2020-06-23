@@ -1,0 +1,171 @@
+﻿<dx:ThemedWindow
+    x:Class="FileRename.DxWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:fileRename="clr-namespace:FileRename"
+    Title="移动测速文件重命名工具"
+    Width="800" Height="600"
+    Icon="{dx:DXImage SvgImages/Dashboards/RenameDataSource.svg}"
+    ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowState="Normal">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="3*" MinHeight="300" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" MinHeight="100" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Menu x:Name="Menu1" Grid.Row="0">
+            <MenuItem x:Name="MenuItemFile" Header="文件">
+                <MenuItem
+                    x:Name="MenuItemOpen"
+                    Click="SimpleButtonPath_Click" Header="选择目录" />
+                <MenuItem
+                    x:Name="MenuItemColse"
+                    Click="MenuItemColse_Click" Header="退出" />
+            </MenuItem>
+            <MenuItem
+                x:Name="MenuItemAbout"
+                Click="MenuItemAbout_Click" Header="关于" />
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                x:Name="LabelImage1"
+                Grid.Row="0" Grid.Column="0"
+                Margin="1" HorizontalAlignment="Left"
+                Content="图1:" />
+            <Label
+                x:Name="LabelImage2"
+                Grid.Row="0" Grid.Column="1"
+                Margin="1" HorizontalAlignment="Left"
+                Content="图2:" />
+            <Border
+                Grid.Row="1" Grid.Column="0"
+                MinHeight="100"
+                Margin="1" HorizontalAlignment="Stretch"
+                BorderBrush="Silver" BorderThickness="1">
+                <Image x:Name="Image1" />
+            </Border>
+            <Border
+                Grid.Row="1" Grid.Column="1"
+                MinHeight="100"
+                Margin="1" HorizontalAlignment="Stretch"
+                BorderBrush="Silver" BorderThickness="1">
+                <Image x:Name="Image2" />
+            </Border>
+            <Label
+                x:Name="LabelImageListIndex"
+                Grid.Row="1" Grid.Column="0"
+                Margin="2" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                Content="1" />
+            <Label
+                x:Name="LabelImageListIndex2"
+                Grid.Row="1" Grid.Column="1"
+                Margin="2" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                Content="2" />
+            <Label
+                x:Name="LabelImageInfo1"
+                Grid.Row="2" Grid.Column="0"
+                Margin="1" HorizontalAlignment="Left" />
+            <Label
+                x:Name="LabelImageInfo2"
+                Grid.Row="2" Grid.Column="1"
+                Margin="1" HorizontalAlignment="Left" />
+        </Grid>
+        <GridSplitter
+            Grid.Row="2"
+            Height="1"
+            HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <dx:SimpleButton
+                    x:Name="SimpleButtonBack"
+                    Height="25"
+                    Margin="1"
+                    Click="SimpleButtonBack_Click"
+                    Glyph="{dx:DXImage SvgImages/RichEdit/Prev.svg}" />
+
+                <dx:SimpleButton
+                    x:Name="SimpleButtonNext"
+                    Height="25"
+                    Margin="1"
+                    Click="SimpleButtonNext_Click"
+                    Glyph="{dx:DXImage SvgImages/RichEdit/Next.svg}" />
+
+            </StackPanel>
+            <Label
+                x:Name="LabelCheck"
+                Grid.Row="1"
+                Content="重命名前，确认上面两张图为同一辆车，并且正确显示违法时间、速度和限速，否则请先检查图片是否正确后再重命名。" Visibility="Hidden" />
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Label Content="文件名：违法时间__实测值__标准值_" />
+                <CheckBox x:Name="CheckBox1" IsChecked="False" />
+                <dxe:TextEdit
+                    x:Name="TextEditWfdd"
+                    Width="200"
+                    NullText="违法地点" />
+                <Label Content="__序号.jpg" />
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <dx:SimpleButton
+                    x:Name="SimpleButtonPath"
+                    Height="25"
+                    Margin="1" VerticalAlignment="Center"
+                    Click="SimpleButtonPath_Click" Content="选择文件目录"
+                    Glyph="{dx:DXImage SvgImages/Dashboards/Open.svg}" />
+                <dx:SimpleButton
+                    x:Name="SimpleButtonRenamefile"
+                    Height="25"
+                    Margin="1" VerticalAlignment="Center"
+                    Click="SimpleButtonRenamefile_Click" Content="重命名文件"
+                    Glyph="{dx:DXImage SvgImages/Dashboards/RenameQuery.svg}" />
+                <CheckBox
+                    x:Name="CheckBoxBackup"
+                    Margin="1"
+                    Content="是否备份原始文件" IsChecked="True" />
+
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <Label
+                    x:Name="Label1"
+                    Margin="1"
+                    Content="当前选择目录是：" Visibility="Hidden" />
+
+                <Label x:Name="LabelPath" Margin="1" />
+                <Label
+                    x:Name="LabelImagecount"
+                    Margin="1"
+                    Content="" />
+            </StackPanel>
+        </Grid>
+
+        <fileRename:LoadingWait
+            x:Name="LoadingWait1"
+            Grid.Row="0" Grid.RowSpan="5"
+            Visibility="Collapsed" />
+        <StatusBar Grid.Row="4">
+            <ProgressBar
+                x:Name="ProgresBar1"
+                Width="200" Height="15"
+                Margin="20,0,0,0"
+                Minimum="0" Visibility="Hidden" />
+        </StatusBar>
+    </Grid>
+</dx:ThemedWindow>
