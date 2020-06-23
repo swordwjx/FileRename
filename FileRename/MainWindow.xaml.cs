@@ -325,7 +325,7 @@ namespace FileRename
             _veh.DcClxs = 0;
             _veh.Hphm = "浙K0001";
             _veh.Hpzl = "02";
-            _veh.Wfxw = "13521";
+            _veh.Wfxw = "135212";
         }
 
         private BitmapImage GetBitmapImage(string filename)
