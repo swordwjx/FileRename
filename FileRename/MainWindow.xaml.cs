@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -323,7 +323,7 @@ namespace FileRename
             _veh.Clsd = 0;
             _veh.Clxs = 0;
             _veh.DcClxs = 0;
-            _veh.Hphm = "浙K";
+            _veh.Hphm = "浙K0001";
             _veh.Hpzl = "02";
             _veh.Wfxw = "13521";
         }
