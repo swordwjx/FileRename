@@ -163,7 +163,7 @@ namespace FileRename
         {
             var ss = new string[10];
             sblx = "";
-            var s = Encoding.Default.GetString(BitmapImageToByte(fileName)).Substring(0,2200);
+            var s = Encoding.Default.GetString(BitmapImageToByte(fileName)).Substring(0,2300);
             if (s.IndexOf("CAM_SYSN=Robot", StringComparison.Ordinal) != -1) //6F
             {
                 sblx = "6F";
