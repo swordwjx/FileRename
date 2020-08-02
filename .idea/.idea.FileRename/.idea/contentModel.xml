@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\weijianxin\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\weijianxin\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_FileRename.-789546502.00" t="ExcludeRecursive" />
+    <e p="C:\Users\weijianxin\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_FileRename.233340972.00" t="ExcludeRecursive" />
     <e p="C:\Users\weijianxin\AppData\Roaming\JetBrains\Rider2020.1\consoles\db" t="IncludeRecursive" />
-    <e p="D:\Source1\Workspaces\工作区\Lsjj_wpf\FileRename" t="IncludeFlat">
+    <e p="D:\Source\Workspaces\Lsjj_wpf\FileRename" t="IncludeFlat">
       <e p="FileRename" t="IncludeRecursive">
         <e p="AboutBox1.cs" t="Include" />
         <e p="AboutBox1.Designer.cs" t="Include" />
